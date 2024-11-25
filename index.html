@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Kassem Abbassi Portfolio</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="ico.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="centered">
+            <img src="./assets//imgpro.png" alt="Mohamed Kassem Abbassi" class="profile-pic">
+            <h1>Mohamed Kassem Abbassi</h1>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a passionate Computer Science and Software Engineering student, currently completing my engineering degree. I have a strong foundation in software development, problem-solving, and system design. With experience in technologies like Java, Python, JavaScript, and web development, I’m always eager to learn and explore new tools.
+        </p>
+        <p>
+            I thrive in collaborative environments, believing that effective teamwork and clear communication are key to delivering quality software. As I continue my studies, I aim to contribute to innovative projects and apply my knowledge to real-world challenges.
+        </p>
+    </section>
+    
+
+   <section id="skills">
+    <h2>Skills</h2>
+
+    <!-- Ligne pour Frontend et Backend -->
+    <div class="skills-row">
+        <!-- Frontend Development -->
+        <div class="skills-category">
+            <div class="category-title">Frontend Development</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>Expert</p>
+                    <div class="progress-bar">
+                        <div style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>Advanced</p>
+                    <div class="progress-bar">
+                        <div style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i> <!-- Icône pour JavaScript -->
+                    <h3>JavaScript</h3>
+                    <p>Intermediate</p> <!-- Niveau de compétence -->
+                    <div class="progress-bar">
+                        <div style="width: 65%;"></div> <!-- Barre de progression -->
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Intermediate</p>
+                    <div class="progress-bar">
+                        <div style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backend Development -->
+        <div class="skills-category">
+            <div class="category-title">Backend Development</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Intermediate</p>
+                    <div class="progress-bar">
+                        <div style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Advanced</p>
+                    <div class="progress-bar">
+                        <div style="width: 75%"></div>
+                    </div>
+                </div>
+                <!-- Ajout de Express -->
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Ligne pour Desktop Development et Mobile Android Native -->
+    <div class="skills-row">
+        <!-- Desktop Development -->
+        <div class="skills-category">
+            <div class="category-title">Desktop Development</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>JavaFX</h3>
+                    <p>Expert</p>
+                    <div class="progress-bar">
+                        <div style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Intermediate</p>
+                    <div class="progress-bar">
+                        <div style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>QtDesigner</h3>
+                    <p>Advanced</p>
+                    <div class="progress-bar">
+                        <div style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Android Native -->
+        <div class="skills-category">
+            <div class="category-title">Mobile Android Native</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-android"></i>
+                    <h3>Android (Java)</h3>
+                    <p>Intermediate</p>
+                    <div class="progress-bar">
+                        <div style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ligne pour Database -->
+    <div class="skills-row">
+        <!-- Database -->
+        <div class="skills-category">
+            <div class="category-title">Database</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
+                    <p>Advanced</p>
+                    <div class="progress-bar">
+                        <div style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>AutoSoutenance</h3>
+                <button onclick="window.open('https://github.com/kassemabbassi/AutoSoutenance', '_blank')">
+                    View on GitHub
+                </button>
+            </div>
+            <div class="project-card">
+                <h3>Library Management System (LMS)</h3>
+                <button onclick="window.open('https://github.com/kassemabbassi/Library-Management-System', '_blank')">
+                    View on GitHub</button>
+            </div>
+            <div class="project-card">
+                <h3>Resourcy</h3>
+                <button onclick="window.open('https://github.com/kassemabbassi/Resourcy', '_blank')">
+                    View on GitHub</button>
+            </div>
+            <div class="project-card">
+                <h3>WADHAKER (Prayer Reminder App)</h3>
+                <button onclick="window.open('https://github.com/kassemabbassi/WADHAKER', '_blank')">
+                    View on GitHub</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <input type="email" name="user_email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+        
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +216 20259607</p>
+            <p><i class="fas fa-map-marker-alt"></i> Monastir, Tunisia</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Mohamed Kassem Abbassi. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // Variable pour suivre la section courante
+let currentSectionIndex = 0;
+const sections = document.querySelectorAll('section');
+const totalSections = sections.length;
+
+// Fonction pour faire défiler jusqu'à la section suivante ou précédente
+function scrollToSection(index) {
+    // Assurez-vous que l'index est dans la plage valide
+    if (index >= 0 && index < totalSections) {
+        sections[index].scrollIntoView({ behavior: 'smooth' });
+        currentSectionIndex = index;
+    }
+}
+
+// Écouter l'événement de défilement
+window.addEventListener('wheel', (event) => {
+    // Si on fait défiler vers le bas (down), on passe à la section suivante
+    if (event.deltaY > 0) {
+        if (currentSectionIndex < totalSections - 1) {
+            scrollToSection(currentSectionIndex + 1);
+        }
+    }
+    // Si on fait défiler vers le haut (up), on revient à la section précédente
+    else if (event.deltaY < 0) {
+        if (currentSectionIndex > 0) {
+            scrollToSection(currentSectionIndex - 1);
+        }
+    }
+});
+
+</script>
+<script>
+// Initialiser EmailJS avec ton user_id
+emailjs.init('W1d68hDX4W65aItqe'); // Remplace par ton user_id
+
+// Ajouter un événement de soumission du formulaire
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+
+    // Envoi du formulaire via EmailJS
+    emailjs.sendForm('service_uz1yx2d', 'template_o2vnx0q', this)
+        .then(function(response) {
+            console.log('Success!', response);
+            alert('Message sent successfully!');
+        }, function(error) {
+            console.log('Failed...', error);
+            alert('Failed to send the message. Please try again!');
+        });
+});
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,392 @@
+/* Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    background-color: #000;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    background: linear-gradient(135deg, #101010, #333);
+    padding: 20px; /* Espacement pour petits écrans */
+    box-sizing: border-box;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 250px; /* Taille de l'image réduite pour les petits écrans */
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+.profile-pic:hover {
+    filter: brightness(1.5);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh; /* Moins de hauteur pour les petits écrans */
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px; /* Ajuster la taille de l'image sur les tablettes */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Réduire la taille du texte sur les tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh; /* Moins de hauteur pour les petits écrans comme les téléphones */
+        padding: 10px; /* Moins d'espacement sur les petits appareils */
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px; /* Plus petite image sur les petits écrans */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Réduire encore la taille du texte sur les téléphones */
+    }
+}
+
+
+/* Section Titles */
+h2 {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #f39c12;
+}
+
+/* About Section */
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+/* Skills Section */
+#skills {
+    padding: 40px 0;
+    background-color: #101010; /* Fond sombre */
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    color: #f39c12; /* Couleur des titres de section */
+    margin-bottom: 20px;
+}
+
+/* Conteneur pour chaque ligne de catégories */
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Conteneur pour chaque catégorie */
+.skills-category {
+    flex: 1;
+}
+
+/* Titre de chaque catégorie de compétences */
+.category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    margin: 30px 0 10px;
+    text-align: center;
+    border-bottom: 2px solid #f39c12; /* Souligné en orange */
+    padding-bottom: 5px;
+}
+
+/* Conteneur des compétences */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribution égale des cartes */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Carte individuelle pour chaque compétence */
+.skill-card {
+    background-color: #222; /* Fond des cartes sombre */
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 150px; /* Réduit la largeur des cartes */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour l'effet de profondeur */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol des cartes de compétences */
+.skill-card:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille */
+    box-shadow: 0 6px 12px rgba(255, 193, 7, 0.6); /* Ombre plus marquée */
+}
+
+/* Icône dans chaque carte */
+.skill-card i {
+    font-size: 3rem;
+    color: #f39c12; /* Icônes en couleur orange */
+    margin-bottom: 10px;
+}
+
+/* Titre de chaque compétence */
+.skill-card h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Description de chaque compétence */
+.skill-card p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Barre de progression de chaque compétence */
+.progress-bar {
+    background-color: #444; /* Fond sombre pour la barre */
+    border-radius: 5px;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #f39c12; /* Remplissage orange pour la progression */
+    transition: width 0.3s ease;
+}
+
+/* Ajustement pour les petits écrans (Responsive Design) */
+@media (max-width: 768px) {
+    .skills-row {
+        flex-direction: column;
+    }
+
+    .skills-category {
+        margin-bottom: 30px; /* Ajoute un espacement entre les catégories */
+    }
+
+    .skill-card {
+        width: 70%; /* Les cartes prennent 70% de la largeur sur petits écrans */
+    }
+}
+
+/* Container des projets */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Carte individuelle des projets */
+.project-card {
+    background-color: #222;
+    padding: 20px; /* Réduit l'espace intérieur de la carte */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 200px; /* Réduit la hauteur des cartes */
+    display: flex;
+    flex-direction: column; /* Permet de centrer le contenu verticalement */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+}
+
+/* Effet au survol */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 193, 7, 0.6);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.project-card button {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+    background-color: #e67e22;
+}
+
+/* Media query pour les tablettes */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les tablettes */
+    }
+}
+
+/* Media query pour les smartphones */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
+    }
+
+    .project-card {
+        height: auto; /* Laissez la carte s'adapter à son contenu */
+        padding: 15px; /* Réduisez l'espacement interne */
+    }
+}
+
+/* Media query pour les petits smartphones */
+@media (max-width: 480px) {
+    .projects-container {
+        padding: 0 10px; /* Moins d'espacement sur les petits écrans */
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem; /* Réduisez la taille du texte sur les petits écrans */
+    }
+
+    .project-card button {
+        padding: 8px 12px; /* Réduisez la taille du bouton sur les petits écrans */
+    }
+}
+
+
+
+/* Contact Section */
+form {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+form button {
+    padding: 10px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e67e22;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
