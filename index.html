@@ -181,7 +181,7 @@
                     <button onclick="window.open('https://github.com/kassemabbassi/AutoSoutenance', '_blank')">GitHub</button>
                 </div>
             </div>
-                          <!-- Projet 5 : BlueBalance -->
+                          <!-- Projet 2 : BlueBalance -->
 <div class="project-card">
     <h3>BlueBalance</h3>
     <p>An interactive educational web app exploring the parallels between ocean systems and the human body, designed to raise awareness about ocean preservation.</p>
@@ -190,9 +190,6 @@
         <button onclick="window.open('https://blue-balance.vercel.app', '_blank')">Visit Site</button>
     </div>
 </div>
-    
-           
-    
             <!-- Projet 3 -->
             <div class="project-card">
                 <h3>Resourcy</h3>
@@ -201,7 +198,6 @@
                     <button onclick="window.open('https://github.com/kassemabbassi/Resourcy', '_blank')">GitHub</button>
                 </div>
             </div>
-    
             <!-- Projet 4 -->
             <div class="project-card">
                 <h3>WADHAKER (Prayer Reminder App)</h3>
@@ -210,17 +206,32 @@
                     <button onclick="window.open('https://github.com/kassemabbassi/WADHAKER', '_blank')">GitHub</button>
                 </div>
             </div>
-             
 
- <!-- Projet 5 -->
+<!-- Project 5 -->
+<div class="project-card">
+    <h3>ATM Application</h3>
+    <p>A secure and efficient system for managing ATM transactions, including account crediting, withdrawals, transfers, and balance inquiries, ensuring seamless and reliable financial operations.</p>
+    <div class="project-buttons">
+        <button onclick="window.open('https://github.com/kassemabbassi/ATM', '_blank')">GitHub</button>
+    </div>
+</div>
+<!-- Project 6 -->
+<div class="project-card">
+    <h3>ISI Money Control</h3>
+    <p>A secure mobile app for real-time card management, transactions, and transfers, directly linked to the ATM system for seamless financial operations.</p>
+    <div class="project-buttons">
+        <button onclick="window.open('https://github.com/kassemabbassi/ISI-Money-Control', '_blank')">GitHub</button>
+    </div>
+</div>
+ <!-- Projet 7 -->
  <div class="project-card">
     <h3>Library Management System (LMS)</h3>
     <p>A desktop app for managing library operations, including students, books, and borrowing transactions.</p>
     <div class="project-buttons">
         <button onclick="window.open('https://github.com/kassemabbassi/Library-Management-System', '_blank')">GitHub</button>
     </div>
-</div>
-       
+
+
     </section>
     <section id="club-activities">
         <h2>Clubs and Activities</h2>
@@ -239,8 +250,7 @@
                 <div class="club-description">
                     <p>CPU ISIMM is a dynamic club specializing in development, problem-solving, and robotics. Known for its impactful initiatives, the club organizes training sessions to enhance technical skills, hosts competitions to challenge creativity, and actively participates in events to showcase talent. By fostering innovation and collaboration, CPU ISIMM empowers its members to excel in technology and engineering.</p>
                 </div>
-            </div>
-    
+            </div>  
             <!-- Événements -->
             <h3 class="section-subtitle">Events</h3>
             <div class="event-card">
@@ -260,11 +270,8 @@
             <input type="email" name="user_email" id="from_email" placeholder="Your Email" required>
             <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send</button>
-        </form>
-        
-        
+        </form> 
     </section>
-
     <footer>
         <div class="footer-content">
             <!-- Informations de contact -->
@@ -319,16 +326,12 @@
         description.style.display = "block";
     }
 }
-    
-
 </script>
 <script>
-    
     function afficherNotification(message, etat) {
     // Crée un élément de notification
     const notification = document.createElement("div");
     notification.classList.add("notification");
-
     // Ajoute le style en fonction de l'état
     if (etat) {
         notification.classList.add("success");
@@ -337,16 +340,13 @@
         notification.classList.add("error");
         notification.innerHTML = `<i class="fas fa-times-circle"></i> ${message}`;
     }
-
     // Ajoute la notification au conteneur
     const container = document.getElementById("notification-container");
     container.appendChild(notification);
-
     // Déclenche l'animation d'apparition
     setTimeout(() => {
         notification.classList.add("show");
     }, 100);
-
     // Supprime la notification après 5 secondes
     setTimeout(() => {
         notification.classList.add("hide");
@@ -356,11 +356,8 @@
         });
     }, 5000); // 5 secondes avant la disparition
 }
-
-
 // Initialiser EmailJS avec ton user_id
 emailjs.init('W1d68hDX4W65aItqe'); // Remplace par ton user_id
-
 // Ajouter un événement de soumission du formulaire
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Empêcher le rechargement de la page
@@ -378,22 +375,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             document.getElementById("message").value = ""
         }, function(error) {
             console.log('Failed...', error);
-
             afficherNotification("Failed to send the message. Please try again!", false);
             document.getElementById("from_email").value = ""
 document.getElementById("message").value = ""
         });
 });
-
-
-
-
-
-
-
-
-
-
 </script>
-
 </html>
