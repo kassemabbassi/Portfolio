@@ -4,388 +4,645 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Kassem Abbassi Portfolio</title>
+    <!-- EmailJS pour le formulaire de contact -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" href="assets/ico.png" type="image/png">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Intégration Tailwind en un clin d’œil -->
+  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/scroll-indicator.css">
+    <link rel="stylesheet" href="./css/activities.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    
+    <link rel="icon" href="assets/ico.png" type="image/png">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNYJC40SXH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-GNYJC40SXH');
     </script>
 </head>
 <body>
-    <header>
+    <!-- Background animé amélioré -->
+    <div class="animated-background">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+        <div class="floating-shape shape4"></div>
+        <div class="floating-shape shape5"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <!-- Header avec nouvelle navbar -->
+    <header class="glass-nav">
         <nav>
-            <ul>
-                <li><a href="#intro">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#intro" class="nav-link"><span>About</span></a></li>
+                <li><a href="#skills" class="nav-link"><span>Skills</span></a></li>
+                <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+                <li><a href="#club-activities" class="nav-link"><span>Activities</span></a></li>
+                <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
             </ul>
         </nav>
     </header>
+
     <div id="notification-container"></div>
 
-    <section id="intro" class="intro-section">
-        <div class="intro-container">
-            <div class="intro-text">
-                <h1>Mohamed Kassem Abbassi</h1>
-                <h2>Software Engineering Student</h2>
-                <p>
-                    I’m a passionate Software Engineering student, continuously exploring new technologies and best practices in software development.  
+    <!-- Section Intro améliorée -->
+<section id="intro" class="intro-section">
+    <div class="intro-container">
+        <div class="intro-text">
+            <h2 class="role-title">Software Engineering Student</h2>
+            <h1 class="name-title">Mohamed Kassem Abbassi</h1>
+            
+            <div class="intro-paragraphs">
+                <p class="intro-paragraph primary">
+                    I'm a <span class="highlight">passionate</span> Software Engineering student, continuously <span class="highlight">exploring</span> new technologies and best practices in software development.
                 </p>
-                <p>
-                    My passion lies in creating efficient systems and driving innovation. I enjoy tackling complex challenges, optimizing systems, and collaborating on impactful projects that enhance efficiency and user experience.
+                <p class="intro-paragraph secondary">
+                    My <span class="highlight">passion</span> lies in creating <span class="highlight">efficient systems</span> and driving <span class="highlight">innovation</span>. I enjoy tackling <span class="highlight">complex challenges</span>, optimizing systems, and collaborating on impactful projects that enhance efficiency and user experience.
                 </p>
+            </div>
+            
+            <div class="scroll-indicator-container">
+                <div class="mouse-scroll">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="scroll-text">Scroll to discover</p>
+            </div>
+        </div>
+        
+        <div class="intro-image">
+            <div class="image-wrapper">
+                <div class="image-backdrop"></div>
+                <div class="image-glow"></div>
+                <div class="image-container">
+                    <img src="./assets/imgpro.png" alt="Mohamed Kassem Abbassi" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title">My Skills</h2>
+                <p class="text-blue-300 text-lg max-w-2xl mx-auto mt-4">
+                    The technologies and tools I use to bring ideas to life
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Frontend Development -->
+                <div class="skill-card" data-aos="flip-left" data-aos-duration="800">
+                    <h3 class="skill-category-title">Frontend Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5 text-orange-500"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt text-blue-500"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square text-yellow-400"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react text-blue-400"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/next.png" alt="Next.js Icon" class="w-6 h-6">
+                            <span>Next.js</span>
+                        </div>
+                    </div>
+                </div>
                 
-            </div>
-            <div class="intro-image">
-                <img src="./assets/imgpro.png" alt="Mohamed Kassem Abbassi" class="profile-pic">
+                <!-- Backend Development -->
+                <div class="skill-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
+                    <h3 class="skill-category-title">Backend Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <img src="assets/spring.png" alt="Spring Boot Icon" class="w-6 h-6">
+                            <span>Spring</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js text-green-500"></i>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Development -->
+                <div class="skill-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
+                    <h3 class="skill-category-title">Desktop Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-java text-red-500"></i>
+                            <span>JavaFX</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python text-blue-500"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Development -->
+                <div class="skill-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
+                    <h3 class="skill-category-title">Mobile Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-android text-green-500"></i>
+                            <span>Android (Java)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react text-blue-400"></i>
+                            <span>React Native</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Database -->
+                <div class="skill-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
+                    <h3 class="skill-category-title">Database</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fas fa-database text-blue-400"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database text-green-400"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development Tools -->
+                <div class="skill-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="500">
+                    <h3 class="skill-category-title">Development Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt text-orange-500"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github text-white"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker text-blue-500"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
 
-    <section id="skills" class="skills-section">
-        <h2>My Skills</h2>
-        <div class="skills-grid">
-            <!-- Frontend Development -->
-            <div class="skill-category">
-                <h3 class="category-title">Frontend Development</h3>
-                <div class="skill-list">
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React.js</span>
-                    </div>
-                    <!-- Next.js avec une image -->
-                    <div class="skill-item">
-                        <img src="assets/next.png" alt="Next js Icon">
-                        <span>Next.js</span>
-                    </div>
-
-
-                </div>
-            </div>
-            <!-- Backend Development -->
-<div class="skill-category">
-    <h3 class="category-title">Backend Development</h3>
-    <div class="skill-list">
-        <div class="skill-item">
-            <img src="assets/spring.png" alt="Spring Boot Icon">
-            <span>Spring</span>
-        </div>
-        <div class="skill-item">
-           <i class="fab fa-node-js"></i>
-            <span>Express.js</span>
-        </div>
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A showcase of my recent work and contributions</p>
         
-    </div>
-</div>
-            <!-- Desktop Development -->
-            <div class="skill-category">
-                <h3 class="category-title">Desktop Development</h3>
-                <div class="skill-list">
-                    <div class="skill-item">
-                        <i class="fab fa-java"></i>
-                        <span>JavaFX</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
-                    </div>
-                   
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800">
+                <div class="project-badge">In Progress</div>
+                <div class="project-content">
+                    <h3>HR & Admin Management System</h3>
+                    <p>Web application for HR and administrative management: employee records, leave requests, performance evaluations, and internal process management.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/RH-project" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
             </div>
-            <!-- Mobile Development -->
-            <div class="skill-category">
-                <h3 class="category-title">Mobile Development</h3>
-                <div class="skill-list">
-                    <div class="skill-item">
-                        <i class="fab fa-android"></i>
-                        <span>Android (Java)</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React Native</span>
-                    </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="project-content">
+                    <h3>AutoSoutenance</h3>
+                    <p>A desktop app to automate final project defense management, including scheduling, notifications, and archiving.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/AutoSoutenance" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
             </div>
-           <!-- Database -->
-<div class="skill-category">
-    <h3 class="category-title">Database</h3>
-    <div class="skill-list">
-        <div class="skill-item">
-            <i class="fas fa-database"></i>
-            <span>MySQL</span>
+            
+            <!-- Project 3 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="project-content">
+                    <h3>BlueBalance</h3>
+                    <p>An interactive educational web app exploring the parallels between ocean systems and the human body, designed to raise awareness about ocean preservation.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/BlueBalance" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://blue-balance.vercel.app" target="_blank" class="project-btn visit-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="project-content">
+                    <h3>Resourcy</h3>
+                    <p>A desktop app for efficient hardware resource management and allocation.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/Resourcy" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="project-content">
+                    <h3>WADHAKER</h3>
+                    <p>A smart desktop app for Islamic prayer reminders, featuring prayer times, countdowns, and Adhan notifications.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/WADHAKER" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="project-content">
+                    <h3>ATM Application</h3>
+                    <p>A secure and efficient system for managing ATM transactions, including account crediting, withdrawals, transfers, and balance inquiries.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/ATM" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 7 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                <div class="project-content">
+                    <h3>ISI Money Control</h3>
+                    <p>A secure mobile app for real-time card management, transactions, and transfers, directly linked to the ATM system.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/ISI-Money-Control" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 8 -->
+            <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                <div class="project-content">
+                    <h3>Library Management System</h3>
+                    <p>A desktop app for managing library operations, including students, books, and borrowing transactions.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/kassemabbassi/Library-Management-System" target="_blank" class="project-btn github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="skill-item">
-            <i class="fas fa-database"></i>
-            <span>MongoDB</span>
-        </div>
     </div>
-</div>
-<!-- Development and Code Management Tools -->
-<div class="skill-category">
-    <h3 class="category-title">Development Tools</h3>
-    <div class="skill-list">
-        <!-- Git -->
-        <div class="skill-item">
-            <i class="fab fa-git-alt"></i> <!-- Git icon -->
-            <span>Git</span>
-        </div>
-        <!-- GitHub -->
-        <div class="skill-item">
-            <i class="fab fa-github"></i> <!-- GitHub icon -->
-            <span>GitHub</span>
-        </div>
-        <!-- Docker -->
-<div class="skill-item">
-    <i class="fab fa-docker"></i> <!-- Docker icon -->
-    <span>Docker</span>
-</div>
+</section>
 
-        
-       
-    </div>
-</div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <!-- Projet 1 -->
-            <div class="project-card">
-                <h3>HR & Admin Management System (In Progress)</h3>
-                <p>Web application for HR and administrative management: employee records, leave requests, performance evaluations, and internal process management.</p>
-                <div class="project-buttons">
-                    <button onclick="window.open('https://github.com/kassemabbassi/RH-project', '_blank')">GitHub</button>
-                </div>
+    <!-- Club Activities Section -->
+    <section id="club-activities" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title">Clubs and Activities</h2>
+                <p class="text-blue-300 text-lg max-w-2xl mx-auto mt-4">
+                    Organizations and events I'm involved with
+                </p>
             </div>
-            <div class="project-card">
-                <h3>AutoSoutenance</h3>
-                <p>A desktop app to automate final project defense management, including scheduling, notifications, and archiving.</p>
-                <div class="project-buttons">
-                    <button onclick="window.open('https://github.com/kassemabbassi/AutoSoutenance', '_blank')">GitHub</button>
-                </div>
-            </div>
-                          <!-- Projet 2 : BlueBalance -->
-<div class="project-card">
-    <h3>BlueBalance</h3>
-    <p>An interactive educational web app exploring the parallels between ocean systems and the human body, designed to raise awareness about ocean preservation.</p>
-    <div class="project-buttons">
-        <button onclick="window.open('https://github.com/kassemabbassi/BlueBalance', '_blank')">GitHub</button>
-        <button onclick="window.open('https://blue-balance.vercel.app', '_blank')">Visit Site</button>
-    </div>
-</div>
-            <!-- Projet 3 -->
-            <div class="project-card">
-                <h3>Resourcy</h3>
-                <p>A desktop app for efficient hardware resource management and allocation.</p>
-                <div class="project-buttons">
-                    <button onclick="window.open('https://github.com/kassemabbassi/Resourcy', '_blank')">GitHub</button>
-                </div>
-            </div>
-            <!-- Projet 4 -->
-            <div class="project-card">
-                <h3>WADHAKER (Prayer Reminder App)</h3>
-                <p>A smart desktop app for Islamic prayer reminders, featuring prayer times, countdowns, and Adhan notifications.</p>
-                <div class="project-buttons">
-                    <button onclick="window.open('https://github.com/kassemabbassi/WADHAKER', '_blank')">GitHub</button>
-                </div>
-            </div>
-
-<!-- Project 5 -->
-<div class="project-card">
-    <h3>ATM Application</h3>
-    <p>A secure and efficient system for managing ATM transactions, including account crediting, withdrawals, transfers, and balance inquiries, ensuring seamless and reliable financial operations.</p>
-    <div class="project-buttons">
-        <button onclick="window.open('https://github.com/kassemabbassi/ATM', '_blank')">GitHub</button>
-    </div>
-</div>
-<!-- Project 6 -->
-<div class="project-card">
-    <h3>ISI Money Control</h3>
-    <p>A secure mobile app for real-time card management, transactions, and transfers, directly linked to the ATM system for seamless financial operations.</p>
-    <div class="project-buttons">
-        <button onclick="window.open('https://github.com/kassemabbassi/ISI-Money-Control', '_blank')">GitHub</button>
-    </div>
-</div>
- <!-- Projet 7 -->
- <div class="project-card">
-    <h3>Library Management System (LMS)</h3>
-    <p>A desktop app for managing library operations, including students, books, and borrowing transactions.</p>
-    <div class="project-buttons">
-        <button onclick="window.open('https://github.com/kassemabbassi/Library-Management-System', '_blank')">GitHub</button>
-    </div>
-
-
-    </section>
-    <section id="club-activities">
-        <h2>Clubs and Activities</h2>
-        <div class="club-activities-container">
+            
             <!-- Clubs -->
-            <h3 class="section-subtitle">Clubs</h3>
-            <div class="club-card">
-                <div class="club-header" onclick="toggleDescription(this)">
-                    <img src="./assets/cpu.png" alt="CPU ISIMM Logo" class="club-logo">
-                    <div class="club-info">
-                        <h3>CPU ISIMM</h3>
-                        <p class="participation-year">2024-2025 as a Member</p>
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-blue-400 mb-6 border-b border-blue-800 pb-2" data-aos="fade-right">Clubs</h3>
+                
+                <div class="club-card" data-aos="fade-up">
+                    <div class="club-header" onclick="toggleDescription(this)">
+                        <img src="./assets/cpu.png" alt="CPU ISIMM Logo" class="club-logo">
+                        <div class="club-info">
+                            <h3 class="text-xl font-semibold text-blue-300">CPU ISIMM</h3>
+                            <p class="text-blue-400 text-sm">2024-2025 as a Member</p>
+                        </div>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
                     </div>
-                    <i class="fas fa-chevron-down club-arrow"></i>
+                    <div class="club-description hidden">
+                        <p class="text-blue-100">CPU ISIMM is a dynamic club specializing in development, problem-solving, and robotics. Known for its impactful initiatives, the club organizes training sessions to enhance technical skills, hosts competitions to challenge creativity, and actively participates in events to showcase talent. By fostering innovation and collaboration, CPU ISIMM empowers its members to excel in technology and engineering.</p>
+                    </div>
                 </div>
-                <div class="club-description">
-                    <p>CPU ISIMM is a dynamic club specializing in development, problem-solving, and robotics. Known for its impactful initiatives, the club organizes training sessions to enhance technical skills, hosts competitions to challenge creativity, and actively participates in events to showcase talent. By fostering innovation and collaboration, CPU ISIMM empowers its members to excel in technology and engineering.</p>
-                </div>
-            </div>  
-            <!-- Événements -->
-            <h3 class="section-subtitle">Events</h3>
-            <div class="event-card">
-                <img src="./assets/ni.jpg" alt="Nuit de l'Informatique" class="event-image">
-                <div class="event-info">
-                    <h3>Nuit de l'Informatique</h3>
-                    <p class="event-date">December 2024</p>
-                    <p class="event-description">The Nuit de l'Informatique is a renowned hackathon where teams collaborate overnight to solve technical challenges in software development and algorithm design. Organized by academic and industry partners, it fosters innovation, teamwork, and technical excellence, offering a unique platform for participants to showcase their skills and engage with cutting-edge technologies.</p>
-                    <a href="https://www.nuitdelinfo.com" target="_blank" class="event-link">View Event</a>
+            </div>
+            
+            <!-- Events -->
+            <div>
+                <h3 class="text-2xl font-semibold text-blue-400 mb-6 border-b border-blue-800 pb-2" data-aos="fade-right">Events</h3>
+                
+                <div class="event-card" data-aos="fade-up">
+                    <img src="./assets/ni.jpg" alt="Nuit de l'Informatique" class="event-image">
+                    <div class="event-content">
+                        <h3 class="text-xl font-semibold text-blue-300 mb-2">Nuit de l'Informatique</h3>
+                        <p class="text-blue-4   00 text-sm mb-3">December 2024</p>
+                        <p class="text-blue-100 mb-4">The Nuit de l'Informatique is a renowned hackathon where teams collaborate overnight to solve technical challenges in software development and algorithm design. Organized by academic and industry partners, it fosters innovation, teamwork, and technical excellence, offering a unique platform for participants to showcase their skills and engage with cutting-edge technologies.</p>
+                        <a href="https://www.nuitdelinfo.com" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-all shadow-lg hover:shadow-blue-500/30">
+                            <i class="fas fa-external-link-alt mr-2"></i> View Event
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact">  
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <input type="email" name="user_email" id="from_email" placeholder="Your Email" required>
-            <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form> 
-    </section>
-    <footer>
-        <div class="footer-content">
-            <!-- Informations de contact -->
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> kassemabbassi5@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> +216 20259607</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Monastir, Tunisia</li>
-                </ul>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title">Contact</h2>
+                <p class="text-blue-300 text-lg max-w-2xl mx-auto mt-4">
+                    Feel free to reach out to me for any inquiries or opportunities
+                </p>
             </div>
-            <!-- Liens vers les réseaux sociaux -->
-            <div class="footer-section">
-                <h3>Follow Me</h3>
-                <ul class="social-links">
-                    <li>
-                        <a href="https://www.linkedin.com/in/kassem-abbassi-9115012b0/" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/kassemabbassi "target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Liens rapides -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            
+            <div class="max-w-lg mx-auto" data-aos="fade-up">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <input type="email" name="user_email" id="from_email" placeholder="Your Email" required 
+                               class="w-full bg-blue-900/30 border border-blue-700 rounded-lg py-3 px-4 text-white placeholder-blue-400 
+                                      focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all">
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" placeholder="Your Message" rows="5" required
+                                  class="w-full bg-blue-900/30 border border-blue-700 rounded-lg py-3 px-4 text-white placeholder-blue-400 
+                                         focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 transition-all resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 
+                                                 text-white font-medium py-3 px-4 rounded-lg shadow-lg hover:shadow-blue-500/30 
+                                                 transition-all transform hover:translate-y-[-2px]">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                </form>
             </div>
         </div>
-        <!-- Droits d'auteur et mentions légales -->
-        <div class="footer-bottom">
-            <p>© 2024 Mohamed Kassem Abbassi. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-blue-950 to-blue-900 py-12 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-300 mb-4">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-blue-100 hover:text-white transition-colors">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i> kassemabbassi5@gmail.com
+                        </li>
+                        <li class="flex items-center text-blue-100 hover:text-white transition-colors">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i> +216 20259607
+                        </li>
+                        <li class="flex items-center text-blue-100 hover:text-white transition-colors">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i> Monastir, Tunisia
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Follow Me -->
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-300 mb-4">Follow Me</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://www.linkedin.com/in/kassem-abbassi-9115012b0/" target="_blank" 
+                               class="flex items-center text-blue-100 hover:text-white transition-colors group">
+                                <i class="fab fa-linkedin text-blue-400 mr-3 group-hover:text-blue-300 transition-colors"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kassemabbassi" target="_blank" 
+                               class="flex items-center text-blue-100 hover:text-white transition-colors group">
+                                <i class="fab fa-github text-blue-400 mr-3 group-hover:text-blue-300 transition-colors"></i> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-300 mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#intro" class="flex items-center text-blue-100 hover:text-white transition-colors">
+                                <i class="fas fa-chevron-right text-blue-400 mr-3"></i> About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="flex items-center text-blue-100 hover:text-white transition-colors">
+                                <i class="fas fa-chevron-right text-blue-400 mr-3"></i> Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="flex items-center text-blue-100 hover:text-white transition-colors">
+                                <i class="fas fa-chevron-right text-blue-400 mr-3"></i> Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="flex items-center text-blue-100 hover:text-white transition-colors">
+                                <i class="fas fa-chevron-right text-blue-400 mr-3"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-10 pt-6 text-center">
+                <p class="text-blue-300">© 2024 Mohamed Kassem Abbassi. All rights reserved.</p>
+                <p class="mt-2 text-blue-400">
+                    <a href="#" class="hover:text-blue-300 transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-blue-300 transition-colors">Terms of Use</a>
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script>
+        // Animation du nom caractère par caractère
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameElement = document.querySelector('.name-animation');
+            const text = nameElement.textContent;
+            nameElement.textContent = '';
+            
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.animationDelay = `${i * 0.1}s`;
+                nameElement.appendChild(span);
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Toggle description visibility
+        function toggleDescription(header) {
+            const description = header.nextElementSibling;
+            const arrow = header.querySelector('i.fa-chevron-down');
+            
+            if (description.classList.contains('hidden')) {
+                description.classList.remove('hidden');
+                description.style.maxHeight = description.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                description.classList.add('hidden');
+                description.style.maxHeight = '0';
+                arrow.style.transform = 'rotate(0)';
+            }
+        }
+        
+        // Notification system
+        function showNotification(message, isSuccess) {
+            const notification = document.createElement('div');
+            notification.classList.add('notification', isSuccess ? 'success' : 'error');
+            
+            notification.innerHTML = `
+                <i class="fas ${isSuccess ? 'fa-check-circle' : 'fa-times-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.getElementById('notification-container').appendChild(notification);
+            
+            // Trigger animation
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // Remove after delay
+            setTimeout(() => {
+                notification.classList.add('hide');
+                notification.addEventListener('animationend', () => {
+                    notification.remove();
+                });
+            }, 5000);
+        }
+        
+        // Initialize EmailJS
+        emailjs.init('W1d68hDX4W65aItqe');
+        
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('from_email').value;
+            const message = document.getElementById('message').value;
+            
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            emailjs.sendForm('service_uz1yx2d', 'template_o2vnx0q', this)
+                .then(function() {
+                    showNotification('Message sent successfully!', true);
+                    document.getElementById('from_email').value = '';
+                    document.getElementById('message').value = '';
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                })
+                .catch(function() {
+                    showNotification('Failed to send the message. Please try again!', false);
+                    
+                    // Reset button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Active navigation link highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
-<script>
-    function toggleDescription(header) {
-    const description = header.nextElementSibling;
-    if (description.style.display === "block") {
-        description.style.display = "none";
-    } else {
-        description.style.display = "block";
-    }
-}
-</script>
-<script>
-    function afficherNotification(message, etat) {
-    // Crée un élément de notification
-    const notification = document.createElement("div");
-    notification.classList.add("notification");
-    // Ajoute le style en fonction de l'état
-    if (etat) {
-        notification.classList.add("success");
-        notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
-    } else {
-        notification.classList.add("error");
-        notification.innerHTML = `<i class="fas fa-times-circle"></i> ${message}`;
-    }
-    // Ajoute la notification au conteneur
-    const container = document.getElementById("notification-container");
-    container.appendChild(notification);
-    // Déclenche l'animation d'apparition
-    setTimeout(() => {
-        notification.classList.add("show");
-    }, 100);
-    // Supprime la notification après 5 secondes
-    setTimeout(() => {
-        notification.classList.add("hide");
-        // Supprime l'élément après l'animation de disparition
-        notification.addEventListener("animationend", () => {
-            notification.remove();
-        });
-    }, 5000); // 5 secondes avant la disparition
-}
-// Initialiser EmailJS avec ton user_id
-emailjs.init('W1d68hDX4W65aItqe'); // Remplace par ton user_id
-// Ajouter un événement de soumission du formulaire
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêcher le rechargement de la page
-    const templateParams = {
-    from_email: document.getElementById("from_email").value,
-    message: document.getElementById("message").value,
-    to_name: "Mohamed kassem Abbassi", 
-  };
-    // Envoi du formulaire via EmailJS
-    emailjs.sendForm('service_uz1yx2d', 'template_o2vnx0q', this)
-        .then(function(response) {
-            console.log('Success!', response);
-            afficherNotification("Message sent successfully!", true);
-            document.getElementById("from_email").value = ""
-            document.getElementById("message").value = ""
-        }, function(error) {
-            console.log('Failed...', error);
-            afficherNotification("Failed to send the message. Please try again!", false);
-            document.getElementById("from_email").value = ""
-document.getElementById("message").value = ""
-        });
-});
-</script>
 </html>

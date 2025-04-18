@@ -1,0 +1,57 @@
+/* Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a192f;
+    color: #ccd6f6;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Import other CSS files */
+@import 'background.css';
+@import 'navigation.css';
+@import 'intro.css';
+@import 'projects.css';
+@import 'scroll-indicator.css';
+
+/* General styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}

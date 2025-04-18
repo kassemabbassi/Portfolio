@@ -1,0 +1,40 @@
+/* Animated Background Styles */
+.animated-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, #0a192f, #112240);
+    overflow: hidden;
+}
+
+.floating-shape {
+    position: absolute;
+    opacity: 0.1;
+    background: linear-gradient(45deg, #64ffda, #0a192f);
+    border-radius: 50%;
+    filter: blur(8px);
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape1 { width: 300px; height: 300px; top: 10%; left: 10%; animation-delay: 0s; }
+.shape2 { width: 200px; height: 200px; top: 60%; left: 20%; animation-delay: 4s; }
+.shape3 { width: 400px; height: 400px; top: 30%; right: 20%; animation-delay: 8s; }
+.shape4 { width: 250px; height: 250px; bottom: 20%; right: 10%; animation-delay: 12s; }
+.shape5 { width: 350px; height: 350px; bottom: 40%; left: 40%; animation-delay: 16s; }
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, 50px) rotate(45deg); }
+    50% { transform: translate(0, 100px) rotate(90deg); }
+    75% { transform: translate(-50px, 50px) rotate(45deg); }
+}
+
+.gradient-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, #0a192f 70%);
+}
