@@ -27,10 +27,6 @@
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
     position: relative;
     z-index: 1;
 }
@@ -552,5 +548,31 @@
     
     .intro-paragraphs {
         padding: 1.2rem;
+    }
+}
+
+
+/* Styles pour les layouts */
+.desktop-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.mobile-layout {
+    display: none;
+    text-align: center;
+}
+/* Media Queries pour responsive */
+@media (max-width: 992px) {
+    .intro-section {
+        padding-top: 90px; /* Ajustez cette valeur à la hauteur de votre navbar */
+    }
+    .desktop-layout {
+        display: none;
+    }
+    .mobile-layout {
+        display: block;
     }
 }

@@ -1,0 +1,239 @@
+.money-transaction-badge {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .transaction-heart {
+    font-size: 24px;
+    color: #64ffda; /* Votre couleur verte */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+    transform-origin: center;
+    transition: all 0.3s ease;
+  }
+  
+  .transaction-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4757;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Animation lorsque des transactions sont présentes */
+  .money-transaction-badge[data-transactions="1"] .transaction-heart {
+    animation: heartbeat 1s ease;
+    color: #ff6b81; /* Rouge pour alerte */
+  }
+  
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Effet au survol */
+  .money-transaction-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+  
+  .money-transaction-badge:hover .transaction-heart {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.8);
+  }
+
+
+
+
+  .mini-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px;
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.compact-icon {
+  font-size: 14px; /* Taille très réduite */
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.compact-icon:first-child {
+  font-size: 16px; /* Légèrement plus grand */
+}
+
+.mini-badge:hover .compact-icon {
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+}
+
+.icon-badge {
+    display: inline-block;
+    font-size: 16px; /* Ajustez cette valeur pour la taille */
+  }
+  
+  /* Option 1 */
+  .icon-badge .icon {
+    display: inline-block;
+    margin: 0 2px;
+    transition: transform 0.2s;
+  }
+  .icon-badge .icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Option 2 */
+  .main-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  
+  /* Option 3 */
+  .icon-stack {
+    position: relative;
+    display: inline-block;
+  }
+  .icon-overlay {
+    position: absolute;
+    right: -3px;
+    bottom: -2px;
+    font-size: 0.6em;
+    color: #64ffda;
+    background: #0a192f;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .event-badge {
+    display: inline-block; /* Assurez-vous qu'il est toujours affiché */
+    background-color: rgba(59, 130, 246, 0.2); /* Couleur bleue semi-transparente qui correspond à votre thème */
+    color: #60a5fa; /* Couleur bleue claire pour le texte */
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+}
+.event-badge:hover {
+    background-color: rgba(96, 165, 250, 0.3); /* Couleur bleue plus claire au survol */
+    color: #fff; /* Texte blanc au survol */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+    transition: all 0.3s ease; /* Transition douce */
+}
+
+
+/* Conteneur des notifications */
+#notification-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Style général d'une notification */
+  .notification {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    color: #1f2937; /* gris anthracite très lisible */
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+  }
+  
+  /* Icône */
+  .notification i {
+    font-size: 1.2rem;
+  }
+  
+  /* Texte du message */
+  .notification span {
+    line-height: 1.4;
+    color: inherit;
+  }
+  
+  /* Notifications de succès */
+  .notification.success {
+    border-left: 5px solid #10b981;
+  }
+  
+  .notification.success i {
+    color: #10b981;
+  }
+  
+  .notification.success span {
+    color: #065f46;
+  }
+  
+  /* Notifications d'erreur */
+  .notification.error {
+    border-left: 5px solid #ef4444;
+  }
+  
+  .notification.error i {
+    color: #ef4444;
+  }
+  
+  .notification.error span {
+    color: #7f1d1d;
+  }
+  
+  /* Apparition */
+  .notification.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Disparition */
+  .notification.hide {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
