@@ -1,4 +1,4 @@
-/* Navigation Styles */
+/* Styles généraux pour la barre de navigation */
 .glass-nav {
     background: rgba(10, 25, 47, 0.8);
     backdrop-filter: blur(10px);
@@ -11,13 +11,17 @@
     border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
+/* Styles pour la liste des liens */
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+/* Styles pour chaque lien */
 .nav-link {
     color: #64ffda;
     text-decoration: none;
@@ -51,14 +55,56 @@
     transform-origin: left;
 }
 
+/* Cacher la case à cocher */
+.nav-toggle {
+    display: none;
+}
+
+/* Cacher le hamburger par défaut (grands écrans) */
+.hamburger {
+    display: none;
+}
+
+/* Media query pour les écrans ≤ 768px */
 @media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
-        padding: 0 1rem;
+    /* Afficher le hamburger */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #64ffda;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
-    
+
+    /* Cacher les liens par défaut */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 25, 47, 0.9);
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    /* Afficher les liens quand la case est cochée */
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Style des liens dans le menu vertical */
     .nav-link {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        width: 100%;
+    }
+
+    /* Supprimer la bordure du dernier lien */
+    .nav-link:last-child {
+        border-bottom: none;
     }
 }
