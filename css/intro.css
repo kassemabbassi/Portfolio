@@ -567,7 +567,7 @@
 /* Media Queries pour responsive */
 @media (max-width: 992px) {
     .intro-section {
-        padding-top: 90px; /* Ajustez cette valeur à la hauteur de votre navbar */
+        padding-top: 30px; /* Ajustez cette valeur à la hauteur de votre navbar */
     }
     .desktop-layout {
         display: none;

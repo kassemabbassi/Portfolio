@@ -108,6 +108,11 @@
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.5px;
+    max-width: 180px; /* Largeur maximale plus courte */
+    text-align: center;
+    white-space: normal; /* Permettre le retour à la ligne */
+    word-wrap: break-word; /* Pour que les mots longs passent à la ligne */
+    overflow-wrap: break-word;
 }
 
 .project-content {
