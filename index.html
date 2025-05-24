@@ -454,6 +454,38 @@
             <!-- Events -->
             <div>
                 <h3 class="text-2xl font-semibold text-blue-400 mb-6 border-b border-blue-800 pb-2" data-aos="fade-right">Events</h3>
+                <div class="event-card" data-aos="fade-up">
+  <img src="./assets/itimpact.jpg" alt="IT Impact by ARSII" class="event-image">
+  <div class="event-content">
+    <h3 class="text-xl font-semibold text-blue-300 mb-2">IT Impact</h3>
+    <div class="event-badge">1st Place</div>
+    <p class="text-blue-400 text-sm mb-3">May 2025</p>
+    <p class="text-blue-100 mb-4">
+      IT Impact, organized by the ARSII (Association de Recherche Scientifique et Innovation en Informatique), was a national competition focused on AI solutions for real-world problems. Our team earned 1st place with two innovative solutions tackling AI in Industry & Innovation, and AI in Health Care Innovation.
+    </p>
+    <button class="solution-toggle-button" onclick="toggleSolutions(this)">
+      <i class="fas fa-external-link-alt"></i> Our solutions
+    </button>
+
+    <div class="solution-links hidden">
+      <a href="https://nurtureai.vercel.app" target="_blank" class="solution-button">
+        <i class="fas fa-robot"></i> NurtureAI
+      </a>
+      <a href="https://safetyai.vercel.app" target="_blank" class="solution-button">
+        <i class="fas fa-heartbeat"></i> SafetyAI
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleSolutions(button) {
+    const container = button.nextElementSibling;
+    container.classList.toggle("hidden");
+  }
+</script>
+
+
                 
                 <div class="event-card" data-aos="fade-up">
                     <img src="./assets/aiwave.jpg" alt="AI Wave 3rd Edition" class="event-image">
