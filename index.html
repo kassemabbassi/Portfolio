@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Kassem Abbassi Portfolio</title>
+    <meta name="description" content="Portfolio of Mohamed Kassem Abbassi, Software Engineering student specializing in automotive software, AI, and full‑stack development. Explore projects, experience, skills, and contact.">
     <!-- EmailJS pour le formulaire de contact -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     
@@ -26,7 +27,6 @@
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/skills.css">
     <link rel="stylesheet" href="./css/icon.css">
-    <link rel="stylesheet" href="./css/icon.css">
     <link rel="stylesheet" href="./css/experience.css">
 
     
@@ -43,7 +43,7 @@
 </head>
 <body>
     <!-- Notification container -->
-<div id="notification-container"></div>
+    <div id="notification-container"></div>
 
     <!-- Background animé amélioré -->
     <div class="animated-background">
@@ -71,8 +71,7 @@
         </nav>
     </header>
 
-    <div id="notification-container"></div>
-
+    <main>
     <section id="intro" class="intro-section">
         <div class="intro-container">
             <!-- Desktop layout -->
@@ -92,7 +91,20 @@
 <p class="intro-paragraph secondary">
     My <span class="highlight">passion</span> lies in building <span class="highlight">efficient systems</span>, driving <span class="highlight">innovation</span>, and collaborating on projects that address <span class="highlight">complex challenges</span> in both digital and automotive technologies.
 </p>
-
+                        <div class="intro-actions">
+                            <a href="#projects" class="intro-cta intro-cta-primary">
+                                <i class="fas fa-code"></i>
+                                <span>View highlighted projects</span>
+                            </a>
+                            <a href="https://github.com/kassemabbassi" target="_blank" class="intro-cta intro-cta-secondary">
+                                <i class="fab fa-github"></i>
+                                <span>Open GitHub profile</span>
+                            </a>
+                            <a href="#contact" class="intro-cta intro-cta-ghost">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Get in touch</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="intro-image">
@@ -156,8 +168,20 @@
 <p class="intro-paragraph secondary">
     My <span class="highlight">passion</span> lies in building <span class="highlight">efficient systems</span>, driving <span class="highlight">innovation</span>, and collaborating on projects that address <span class="highlight">complex challenges</span> in both digital and automotive technologies.
 </p>
-
-
+                   <div class="intro-actions intro-actions-mobile">
+                        <a href="#projects" class="intro-cta intro-cta-primary">
+                            <i class="fas fa-code"></i>
+                            <span>Projects</span>
+                        </a>
+                        <a href="#experience" class="intro-cta intro-cta-secondary">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                        <a href="#contact" class="intro-cta intro-cta-ghost">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -802,6 +826,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="bg-gradient-to-b from-blue-950 to-blue-900 py-12 relative">
         <div class="container mx-auto px-6">
@@ -878,15 +904,18 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
     <!-- Custom Scripts -->
     <script>
-        // Animation du nom caractère par caractère
+        // Animation du nom caractère par caractère (activée uniquement si l’élément existe)
         document.addEventListener('DOMContentLoaded', function() {
             const nameElement = document.querySelector('.name-animation');
+            if (!nameElement) return;
+
             const text = nameElement.textContent;
             nameElement.textContent = '';
             

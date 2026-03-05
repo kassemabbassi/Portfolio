@@ -55,6 +55,19 @@
     transform-origin: left;
 }
 
+.nav-link.active {
+    color: #0a192f;
+    background: linear-gradient(135deg, #64ffda, #38b2ac);
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.35);
+}
+
+.nav-link.active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    background: transparent;
+}
+
 /* Cacher la case à cocher */
 .nav-toggle {
     display: none;
