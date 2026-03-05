@@ -1,19 +1,40 @@
 /* Club Activities Section - Updated Design */
 .club-card, .event-card {
-    background: rgba(17, 34, 64, 0.8);
-    border-radius: 1rem;
-    padding: 1.5rem;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), transparent 55%),
+                rgba(15, 23, 42, 0.95);
+    border-radius: 1.2rem;
+    padding: 1.6rem 1.8rem;
     margin-bottom: 2rem;
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
     display: flex;
     gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-card::before,
+.event-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(100, 255, 218, 0.06), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .club-card:hover, .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border-color: rgba(100, 255, 218, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+    border-color: rgba(100, 255, 218, 0.4);
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.35), transparent 55%),
+                rgba(15, 23, 42, 0.98);
+}
+
+.club-card:hover::before,
+.event-card:hover::before {
+    opacity: 1;
 }
 
 .club-header {
@@ -25,11 +46,11 @@
 }
 
 .club-logo {
-    width: 80px;  /* Reduced from previous size */
+    width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 12px;  /* Slightly rounded corners */
-    border: 2px solid #64ffda;
+    border-radius: 16px;
+    border: 2px solid #60a5fa;
 }
 
 .club-info {
@@ -37,9 +58,28 @@
 }
 
 .club-info h3 {
-    color: #64ffda;
+    color: #e5f4ff;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+}
+
+.club-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+}
+
+.club-tag {
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(96, 165, 250, 0.6);
+    color: #bfdbfe;
+    font-weight: 600;
 }
 
 .club-description {
@@ -59,7 +99,7 @@
 }
 
 .event-image {
-    width: 120px;  /* Smaller fixed width */
+    width: 120px;
     height: 120px;
     border-radius: 12px;
     overflow: hidden;
@@ -70,7 +110,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.06);
 }
 
 .event-content {
@@ -79,8 +123,27 @@
 }
 
 .event-content h3 {
-    color: #64ffda;
+    color: #e5f4ff;
     margin-bottom: 0.5rem;
+}
+
+.event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.event-tag {
+    padding: 0.18rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(17, 24, 39, 0.9);
+    border: 1px solid rgba(96, 165, 250, 0.55);
+    color: #bfdbfe;
+    font-weight: 600;
 }
 
 .event-link {
