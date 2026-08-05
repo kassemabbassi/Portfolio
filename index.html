@@ -291,6 +291,113 @@
                         </div>
                     </div>
 
+                    <!-- Experience Item -->
+                    <div class="experience-item" id="Experience2">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="card-header">
+                                <div class="company-info">
+                                    <div class="company-avatar">
+                                        <i class="fas fa-car-side"></i>
+                                    </div>
+                                    <div class="role-details">
+                                        <h3 class="job-title">AI Software Engineering Intern</h3>
+                                        <h4 class="company-name">KPIT</h4>
+                                    </div>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="meta-badge duration-badge">1.5 Months · Summer 2026</span>
+                                    <span class="meta-badge location-badge">Sfax, Tunisia</span>
+                                </div>
+                            </div>
+
+                            <div class="project-showcase">
+                                <div class="project-header">
+                                    <div class="project-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h5 class="project-title">AI-Powered Driver Behavior Monitoring for
+                                        Software-Defined Vehicles</h5>
+                                </div>
+                                <p class="project-description">
+                                    Built a complete end-to-end Driver Behavior Monitoring System for a
+                                    Software-Defined Vehicle (SDV) with zero physical hardware: two real-time ONNX
+                                    AI models (an aggressive-driving classifier and a fatigue-scoring regressor)
+                                    publishing through the real Eclipse Kuksa.val Databroker using COVESA VSS,
+                                    feeding a session-logging pipeline with OTA retrain triggers, and visualized
+                                    live on an InfluxDB + Grafana dashboard. Also engineered an interactive
+                                    keyboard-controlled driving simulator to generate realistic human-driven data
+                                    for the same pipeline.
+                                </p>
+                            </div>
+
+                            <div class="achievements-grid">
+                                <div class="achievement-card">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <span class="achievement-text">Real-time aggressive-driving classifier (Random
+                                        Forest → ONNX) reaching ~99% held-out accuracy on 3s sliding-window
+                                        CAN features</span>
+                                </div>
+                                <div class="achievement-card">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-bed"></i>
+                                    </div>
+                                    <span class="achievement-text">Fatigue-scoring regressor (R² ≈ 0.99) using
+                                        lane-deviation frequency & steering entropy, anchored to Mercedes
+                                        ATTENTION ASSIST methodology</span>
+                                </div>
+                                <div class="achievement-card">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-satellite-dish"></i>
+                                    </div>
+                                    <span class="achievement-text">Live signal publishing via Eclipse Kuksa.val
+                                        Databroker with a custom COVESA VSS overlay & schema enforcement</span>
+                                </div>
+                                <div class="achievement-card">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </div>
+                                    <span class="achievement-text">Per-driver behavioral profiling with idempotent
+                                        session logging and an accuracy/volume-based OTA retrain trigger</span>
+                                </div>
+                                <div class="achievement-card">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-chart-area"></i>
+                                    </div>
+                                    <span class="achievement-text">Live InfluxDB + Grafana dashboard with batched
+                                        writes, fatigue alert thresholds, and driver comparison panels</span>
+                                </div>
+                                <div class="achievement-card">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <span class="achievement-text">Manual driving simulator (pygame physics + UI)
+                                        with non-blocking, idle-aware live inference feeding the same pipeline</span>
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">scikit-learn</span>
+                                <span class="tech-badge">ONNX Runtime</span>
+                                <span class="tech-badge">Eclipse Kuksa.val</span>
+                                <span class="tech-badge">COVESA VSS</span>
+                                <span class="tech-badge">CAN Bus</span>
+                                <span class="tech-badge">python-can / cantools</span>
+                                <span class="tech-badge">InfluxDB</span>
+                                <span class="tech-badge">Grafana</span>
+                                <span class="tech-badge">pygame</span>
+                                <span class="tech-badge">NumPy / pandas</span>
+                                <span class="tech-badge">Software-Defined Vehicle</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Future Experience Placeholder -->
                     <div class="experience-item future-experience">
                         <div class="timeline-marker">
@@ -512,30 +619,30 @@
                 <p class="section-subtitle">A showcase of my recent work and contributions</p>
 
                 <div class="projects-grid">
-                    <!-- Project 1 -->
-
+                    <!-- Project 0 -->
                     <div class="project-card" data-aos="fade-up" data-aos-duration="800">
-
+                        <div class="project-badge">Winner, Dental Hack</div>
                         <div class="project-content">
-                            <h3>MoldScheduler</h3>
-                            <p>A parallel machine scheduling tool that implements and compares two heuristics — LPT and
-                                RPME — to minimise makespan while smartly handling mold changeover costs across multiple
-                                benchmark instances.</p>
+                            <h3>DentalVault</h3>
+                            <p>A secure, auditable dental record management platform for clinics and patients.
+                                It lets clinics keep encrypted medical records safe, upload and attach patient
+                                files like images and scans, generate and scan QR codes for instant patient
+                                lookup, and receive real-time notifications the moment a record is updated —
+                                making dental record-keeping faster, more organized, and more secure.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Algorithms</span>
-                                <span class="project-tag">Optimization</span>
-                                <span class="project-tag">Scheduling</span>
+                                <span class="project-tag">Full Stack</span>
+                                <span class="project-tag">Healthcare</span>
+                                <span class="project-tag">Security</span>
                             </div>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/kassemabbassi/MoldScheduler" target="_blank"
+                            <a href="https://github.com/kassemabbassi/DentalVault" target="_blank"
                                 class="project-btn github-btn">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-
                         </div>
                     </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-duration="800">
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="800">
                         <div class="project-badge">AI Night 2026</div>
                         <div class="project-content">
                             <h3>SmartTender AI</h3>
@@ -579,29 +686,31 @@
 
                         </div>
                     </div>
+                    <!-- Project 1 -->
+
                     <div class="project-card" data-aos="fade-up" data-aos-duration="800">
 
                         <div class="project-content">
-                            <h3>Form Builder</h3>
-                            <p>A professional form builder that lets you create events, design customizable forms,
-                                manage submissions in real time, and share secure links for effortless participation.
-                            </p>
+                            <h3>MoldScheduler</h3>
+                            <p>A parallel machine scheduling tool that implements and compares two heuristics — LPT and
+                                RPME — to minimise makespan while smartly handling mold changeover costs across multiple
+                                benchmark instances.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Web App</span>
-                                <span class="project-tag">Forms</span>
-                                <span class="project-tag">SaaS</span>
+                                <span class="project-tag">Algorithms</span>
+                                <span class="project-tag">Optimization</span>
+                                <span class="project-tag">Scheduling</span>
                             </div>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/kassemabbassi/formBuilder" target="_blank"
+                            <a href="https://github.com/kassemabbassi/MoldScheduler" target="_blank"
                                 class="project-btn github-btn">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="https://formaholic.vercel.app" target="_blank" class="project-btn visit-btn">
-                                <i class="fas fa-external-link-alt"></i> Visit Site
-                            </a>
+
                         </div>
                     </div>
+                    
+                    
                     <div class="project-card" data-aos="fade-up" data-aos-duration="800">
 
                         <div class="project-content">
